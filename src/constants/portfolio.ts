@@ -19,8 +19,8 @@ export const contact = {
   location: "Punjab, India",
   availability: "Open to SDE, Backend, Full Stack and AI Engineering roles",
   github: "https://github.com/gopal-chaudhary",
-  linkedin: "https://www.linkedin.com/in/gopal-chaudhary/",
-  leetcode: "https://leetcode.com/u/gopal_chaudhary/",
+  linkedin: "https://www.linkedin.com/in/mr-gopal/",
+  leetcode: "https://leetcode.com/u/gopal-chaudhary/",
 };
 
 export const about = {
@@ -186,7 +186,7 @@ export const stats = [
   { value: 19, suffix: "", label: "DB Tables Designed" },
   { value: 6000, suffix: "+", label: "Production LOC" },
   { value: 15, suffix: "+", label: "Projects Shipped" },
-  { value: 3, suffix: "+", label: "Years Experience" },
+  { value: 2, suffix: "+", label: "Years Experience" },
 ];
 
 export const achievements = [
