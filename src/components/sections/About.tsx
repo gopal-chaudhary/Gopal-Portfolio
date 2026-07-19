@@ -8,8 +8,8 @@ export function About() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader eyebrow={about.eyebrow} title="About" />
         <div className="mt-16 grid gap-8 lg:grid-cols-5">
-          <FadeIn>
-            <div className="glass gradient-border relative overflow-hidden rounded-3xl p-8 lg:col-span-2">
+          <FadeIn className="lg:col-span-2">
+            <div className="glass gradient-border relative overflow-hidden rounded-3xl p-8">
               <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
               <div className="relative">
                 <div className="flex items-center gap-4">
@@ -33,8 +33,8 @@ export function About() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <div className="lg:col-span-3 lg:pl-4">
+          <FadeIn delay={0.1} className="lg:col-span-3 lg:pl-4">
+            <div>
               <div className="space-y-5 text-lg leading-relaxed text-foreground/85">
                 {about.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
