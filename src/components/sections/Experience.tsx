@@ -23,11 +23,11 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6 }}
-                className={`relative grid gap-6 md:grid-cols-2 md:gap-16 ${i % 2 === 1 ? "md:[&>*:first-child]:col-start-2" : ""}`}
+                className="relative grid gap-6 md:grid-cols-2 md:gap-16"
               >
                 <div className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-primary shadow-[0_0_0_4px_rgba(120,110,255,0.2)] md:left-1/2" />
 
-                <div className={`pl-10 md:pl-0 ${i % 2 === 1 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
+                <div className={`pl-10 md:pl-0 ${i % 2 === 1 ? "md:col-start-2 md:pr-16 md:text-right" : "md:pl-16"}`}>
                   <div className="group glass gradient-border relative overflow-hidden rounded-2xl p-6 transition-all hover:-translate-y-1 hover:glow-primary">
                     <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${exp.accent} opacity-0 blur-2xl transition-opacity group-hover:opacity-100`} />
                     <div className={`flex items-start justify-between gap-4 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
