@@ -10,10 +10,20 @@ const repoName = process.env.GITHUB_REPOSITORY?.split("/").pop();
 const isGithubPagesBuild = process.env.GITHUB_PAGES === "true" && repoName;
 
 export default defineConfig({
+  nitro: isGithubPagesBuild ? false : undefined,
   vite: {
     base: isGithubPagesBuild ? `/${repoName}/` : "/",
   },
   tanstackStart: {
+    router: {
+      basepath: isGithubPagesBuild ? `/${repoName}` : undefined,
+    },
+    prerender: isGithubPagesBuild
+      ? {
+          enabled: true,
+          crawlLinks: false,
+        }
+      : undefined,
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
