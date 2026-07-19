@@ -27,10 +27,10 @@ export function Experience() {
               >
                 <div className="absolute left-4 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-primary shadow-[0_0_0_4px_rgba(120,110,255,0.2)] md:left-1/2" />
 
-                <div className={`pl-10 md:pl-0 ${i % 2 === 1 ? "md:col-start-2 md:pr-16 md:text-right" : "md:pl-16"}`}>
+                <div className={`pl-10 md:pl-0 ${i % 2 === 1 ? "md:col-start-2 md:pr-16" : "md:pl-16"}`}>
                   <div className="group glass gradient-border relative overflow-hidden rounded-2xl p-6 transition-all hover:-translate-y-1 hover:glow-primary">
                     <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${exp.accent} opacity-0 blur-2xl transition-opacity group-hover:opacity-100`} />
-                    <div className={`flex items-start justify-between gap-4 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
+                    <div className="flex items-start justify-between gap-4">
                       <div>
                         <h3 className="text-xl font-semibold">{exp.company}</h3>
                         <p className="mt-0.5 text-sm text-primary">{exp.role}</p>
@@ -39,21 +39,21 @@ export function Experience() {
                         {exp.duration}
                       </span>
                     </div>
-                    <div className={`mt-2 flex items-center gap-1.5 text-xs text-muted-foreground ${i % 2 === 1 ? "md:justify-end" : ""}`}>
+                    <div className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                       <MapPin className="h-3 w-3" />
                       {exp.location}
                     </div>
 
                     <ul className="mt-5 space-y-2.5">
                       {exp.achievements.map((a) => (
-                        <li key={a} className={`flex gap-2.5 text-sm text-foreground/80 ${i % 2 === 1 ? "md:flex-row-reverse md:text-right" : ""}`}>
+                        <li key={a} className="flex gap-2.5 text-sm text-foreground/80">
                           <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-primary/70" />
                           <span>{a}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className={`mt-5 flex flex-wrap gap-1.5 ${i % 2 === 1 ? "md:justify-end" : ""}`}>
+                    <div className="mt-5 flex flex-wrap gap-1.5">
                       {exp.stack.map((t) => (
                         <span key={t} className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] font-mono text-muted-foreground">
                           {t}
